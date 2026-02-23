@@ -1,19 +1,19 @@
 {
-	"name": "n8n-nodes-<...>",
+	"name": "n8n-nodes-image-text-overlay",
 	"version": "0.1.0",
-	"description": "",
+	"description": "n8n community nodes for overlaying text on images",
 	"license": "MIT",
-	"homepage": "",
+	"homepage": "https://github.com/your-name/n8n-nodes-image-text-overlay",
 	"keywords": [
 		"n8n-community-node-package"
 	],
 	"author": {
-		"name": "",
-		"email": ""
+		"name": "Your Name",
+		"email": "you@example.com"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/<...>/n8n-nodes-<...>.git"
+		"url": "https://github.com/your-name/n8n-nodes-image-text-overlay.git"
 	},
 	"scripts": {
 		"build": "n8n-node build",
@@ -30,21 +30,19 @@
 	"n8n": {
 		"n8nNodesApiVersion": 1,
 		"strict": true,
-		"credentials": [
-			"dist/credentials/GithubIssuesApi.credentials.js",
-			"dist/credentials/GithubIssuesOAuth2Api.credentials.js"
-		],
-		"nodes": [
-			"dist/nodes/GithubIssues/GithubIssues.node.js",
-			"dist/nodes/Example/Example.node.js"
-		]
+		"credentials": [],
+		"nodes": ["dist/nodes/ImageTextOverlay/ImageTextOverlay.node.js"]
 	},
 	"devDependencies": {
 		"@n8n/node-cli": "*",
+		"@types/node": "^22.10.2",
 		"eslint": "9.32.0",
 		"prettier": "3.6.2",
 		"release-it": "^19.0.4",
 		"typescript": "5.9.2"
+	},
+	"dependencies": {
+		"sharp": "^0.33.5"
 	},
 	"peerDependencies": {
 		"n8n-workflow": "*"
